@@ -18,6 +18,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dscnitp.freshersportal.Common.Node;
 import com.dscnitp.freshersportal.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -61,7 +62,7 @@ public class AddPostFragment extends Fragment {
         Type=view.findViewById(R.id.spinner_type);
         Title=view.findViewById(R.id.spinner_title);
         Description=view.findViewById(R.id.edit_text_description);
-        databaseReferenceBlogs=FirebaseDatabase.getInstance().getReference().child("Blogs");
+        databaseReferenceBlogs=FirebaseDatabase.getInstance().getReference().child(Node.Blogs);
 
         final Spinner Branch=view.findViewById(R.id.spinner_branch);
         ArrayAdapter<String> myBranchAdapter=new ArrayAdapter<String>(AddPostFragment.this.getActivity(),android.R.layout.simple_list_item_1,
